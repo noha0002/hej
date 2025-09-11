@@ -1,0 +1,40 @@
+---
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Mit Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Mit Site</h1>
+    </header>
+    <slot />
+    <footer></footer>
+
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .site-header {
+        background-color: #5576d1;
+        color: white;
+        padding: 1rem;
+      }
+      body {
+        background-color: #f6ecdb;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,184 @@
+---
+import Image from "astro/components/Image.astro";
+import MyImage from "../assets/yay.png";
+import MyImage1 from "../assets/yay2.png";
+import MyImage2 from "../assets/Gallery.png";
+---
+
+<div class="box">
+  <Image class="MyImage" src={MyImage} alt="" />
+</div>
+<h2 class="big-text">
+  What can’t I miss in COPENHAGEN <br />
+  <span class="line2">as a CREATIVE first-timer?</span>
+</h2>
+<div>
+
+
+<section class="grid1">
+  <div>
+    <Image src={MyImage1} alt="" />
+  </div>
+  <div>
+    <Image src={MyImage1} alt="" />
+  </div>
+  <div>
+    <Image src={MyImage1} alt="" />
+  </div>
+</section>
+<div class="Image2">
+  <Image src={MyImage2} alt="" />
+</div>
+<h2 class="mini-text">UNMISSABLE FREE GEMS</h2>
+<h3 class="big-text1">
+  Embark on a colorful journey: MISAKI KAWAI’S “COSMIC TRAVELER” EXHIBITION
+</h3>
+<h2 class="text1">FEATURED ARTICLES</h2>
+<hr class="hr" />
+<h2 class="text2">FREE GEMS TO EXPLORE IN COPENHAGEN</h2>
+
+<section class="grid2">
+  <div>
+    <Image src={MyImage1} alt="" />
+    <p>hej</p>
+  </div>
+  <div>
+    <Image src={MyImage1} alt="" />
+    <p>hej</p>
+  </div>
+</section>
+<hr class="hr1" />
+<section class="grid3">
+  <div>
+    <Image src={MyImage1} alt="" />
+    <p>hej</p>
+  </div>
+  <div>
+    <Image src={MyImage1} alt="" />
+    <p>hej</p>
+  </div>
+
+  <style>
+    .MyImage {
+      width: 100%;
+      padding-top: 70px;
+      padding-left: 110px;
+    }
+    .grid2 {
+      padding-top: 7%;
+      padding-bottom: 5%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 70%;
+      gap: 150px;
+
+      padding-left: 15%;
+    }
+    .grid3 {
+      padding-top: 5%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 70%;
+      gap: 150px;
+
+      padding-left: 15%;
+    }
+
+    .grid2 img {
+      aspect-ratio: 1.5/1;
+      width: 100%;
+      height: auto;
+    }
+    .grid3 img {
+      aspect-ratio: 1.5/1;
+      width: 100%;
+      height: auto;
+    }
+    .text1 {
+      font-size: 1vh;
+      padding-left: 40px;
+    }
+    .text2 {
+      font-size: 2vh;
+      padding-left: 40px;
+    }
+  
+    .hr {
+      width: 95%;
+      height: 2px;
+      background-color: black;
+      border: none;
+    }
+    .hr1 {
+      width: 80%;
+      height: 1px;
+      background-color: black;
+      border: none;
+    }
+   
+    .Image2 img {
+      padding-top: 10%;
+      padding-left: 10%;
+    }
+    .Image2 {
+      width: 100%;
+      height: auto;
+    }
+    .grid1 {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+      gap: 60px;
+      padding: 100px;
+      background-color: #5576d1;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .grid1 img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .box {
+      width: 87%;
+    }
+
+    .mini-text {
+      color: rgb(0, 0, 0);
+      padding-top: 100px;
+      margin: 0;
+      padding-left: 650px;
+      font-size: 20px;
+      text-decoration: underline;
+      font-family: inherit;
+    }
+    .line2 {
+      text-align: center;
+      margin-left: 50px;
+    }
+
+    .big-text {
+      color: rgb(0, 0, 0);
+      padding-left: 35%;
+      font-size: 40px;
+      padding-bottom: 100px;
+      font-family: Anton;
+      white-space: pre-wrap;
+      max-width: 800px;
+      width: 790px;
+      margin: 0;
+    }
+    .big-text1 {
+      color: rgb(0, 0, 0);
+      padding-left: 490px;
+      font-size: 40px;
+      padding-bottom: 40px;
+      font-family: Anton;
+      white-space: pre-wrap;
+      max-width: 690px;
+      width: 790px;
+      margin: 0;
+    }
+  </style>
+</section>
