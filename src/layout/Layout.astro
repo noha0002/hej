@@ -1,5 +1,10 @@
 ---
-
+import Image from "astro/components/Image.astro";
+import Love from "../assets/Love.png";
+import Love1 from "../assets/linked.webp";
+import Love2 from "../assets/youtube.png";
+import Love3 from "../assets/logo.png";
+import Hejj from "../pages/Hejj.astro";
 ---
 
 <html lang="en">
@@ -16,16 +21,116 @@
     />
   </head>
   <body>
-    <header class="site-header">
-      <h1>Mit Site</h1>
+    <header class="header">
+      <a href="/Hejj">
+        <div class="logo">
+          <Image src={Love3} alt="" width={150} height={50} />
+        </div>
+      </a>
     </header>
 
     <slot />
     <footer class="footer">
-      <h1 class="footerh1">Design News to your inbox</h1>
+      <div class="grid-footer">
+        <div>
+          <h1 class="footerh1">Design News to your inbox</h1>
+        </div>
+        <form class="footer-grid">
+          <input class="search" type="text" placeholder="E-mail" />
+          <button>Send</button>
+        </form>
+      </div>
+
+      <p class="creative">CREATIVE ESCAPE</p>
+      <div class="footer-grid1">
+        <div class="col">
+          <div class="hr-footer"></div>
+          <p>Art</p>
+          <p>Design</p>
+          <p>Architecture</p>
+        </div>
+        <div class="col">
+          <div class="hr-footer"></div>
+          <p>Website</p>
+          <p>Podcast</p>
+          <p>Authors</p>
+        </div>
+        <div class="col">
+          <div class="hr-footer"></div>
+          <p>Local Creatives</p>
+          <p>Hidden Gems</p>
+          <p>Free Gems</p>
+        </div>
+      </div>
+      <div class="icon-grid">
+        <Image src={Love} alt="" width={50} height={50} />
+        <Image src={Love1} alt="" width={50} height={50} />
+        <Image src={Love2} alt="" width={50} height={50} />
+      </div>
+      
     </footer>
 
     <style>
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .icon-grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: start;
+        place-self: center;
+        padding-top: 90px;
+        gap: 10px;
+      }
+
+      .creative {
+        font-size: 15px;
+      }
+      .footer-grid1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30%;
+        padding-left: 30%;
+      }
+
+      .col {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hr-footer {
+        width: 150%;
+        height: 1px;
+        background-color: white;
+        margin-bottom: 5px;
+      }
+      .footer {
+        padding: 120px;
+        background-color: #5576d1;
+        color: white;
+      }
+
+      .grid-footer {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+      }
+
+      .search {
+        width: 280px;
+        padding: 10px;
+      }
+
       .footerh1 {
         color: white;
         font-size: 40px;
@@ -33,21 +138,16 @@
         max-width: 880px;
         width: 380px;
       }
-      .footer {
-        padding: 150px;
-        background-color: #5576d1;
+
+      body {
+        margin: 0;
+        background-color: #f6ecdb;
       }
-      .site-header {
+
+      .header {
         background-color: #5576d1;
         color: white;
         padding: 1rem;
-      }
-      body {
-        margin: 0;
-      }
-
-      body {
-        background-color: #f6ecdb;
       }
     </style>
   </body>
